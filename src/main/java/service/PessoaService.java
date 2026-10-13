@@ -1,33 +1,35 @@
 
-package com.example.myprimaryapirest;
+package service;
 
+import modals.Pessoa;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+import repository.PessoaRepository;
 
 import java.util.List;
 
 @Service
-public class EmpresaService {
+public class PessoaService {
 
-    private final EmpresaRepository repository;
+    private final PessoaRepository repository;
 
-    public EmpresaService(EmpresaRepository repository) {
+    public PessoaService(PessoaRepository repository) {
         this.repository = repository;
     }
 
-    public List<Empresa> listar() {
+    public List<Pessoa> listar() {
         return repository.todas();
     }
 
-    public Empresa buscarPorSlug(String slug) {
+    public Pessoa buscarPorId(String id) {
         return repository.todas().stream()
-                .filter(empresa -> empresa.slug().equals(slug))
+                .filter(pessoa -> pessoa.id().equals(id))
                 .findFirst()
                 .orElseThrow(() ->
                         new ResponseStatusException(
                                 HttpStatus.NOT_FOUND,
-                                "Empresa não encontrada"
+                                "Pessoa não encontrada"
                         )
                 );
     }

@@ -1,5 +1,5 @@
 
-package com.example.myprimaryapirest;
+package modals;
 
 public record Pessoa(
         String id,

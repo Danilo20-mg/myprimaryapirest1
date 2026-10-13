@@ -1,6 +1,7 @@
 
-package com.example.myprimaryapirest;
+package repository;
 
+import modals.Pessoa;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 

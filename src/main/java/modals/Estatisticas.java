@@ -1,5 +1,5 @@
 
-package com.example.myprimaryapirest;
+package modals;
 
 import java.util.Map;
 

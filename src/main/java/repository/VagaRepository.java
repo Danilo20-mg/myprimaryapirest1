@@ -1,5 +1,6 @@
-package com.example.myprimaryapirest;
+package repository;
 
+import modals.Vaga;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

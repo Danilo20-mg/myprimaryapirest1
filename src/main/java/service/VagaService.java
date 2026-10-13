@@ -1,6 +1,9 @@
-package com.example.myprimaryapirest;
+package service;
 
+import modals.Vaga;
 import org.springframework.stereotype.Service;
+import repository.VagaRepository;
+
 import java.util.List;
 import java.util.stream.Collectors;
 

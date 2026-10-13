@@ -1,6 +1,8 @@
 
-package com.example.myprimaryapirest;
+package controller;
 
+import modals.Estatisticas;
+import service.EstatisticasService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
